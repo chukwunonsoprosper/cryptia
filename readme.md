@@ -15,7 +15,7 @@
 To install Cryptia, clone the repository and navigate to the project directory:
 
 ```bash
-    git clone https://github.com/yourusername/cryptia.git
+git clone https://github.com/yourusername/cryptia.git
 cd cryptia
 ```
 ## Usage:
@@ -23,7 +23,7 @@ cd cryptia
 To use Cryptia, include the cryptia.js file in your project and create an instance of the cryptia object. You can then use the encrypt and decrypt methods to encrypt and decrypt text.
 
 ```javascript
-    // Include the cryptia.js file in your project
+// Include the cryptia.js file in your project
 import { cryptia } from './cryptia.js';
 
 // Create an instance of cryptia
@@ -40,15 +40,6 @@ console.log(decryptedText);
 
 
 ## Project Structure:
-core/
-    engine.js
-cryptia.js
-lib/
-    use.js
-package.json
-src/
-    cryptia.raw.js
-
 
 - **engine.js:** Contains the algorithms used for encryption and decryption.
 
