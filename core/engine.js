@@ -1,4 +1,4 @@
-const Algorithm = () => {
+const encryptionAlgorithm = () => {
     return 'abcdefghijklmnopqrstuvwxyz1234567890 '
 };
 
@@ -6,4 +6,4 @@ const decryptionAlgorithm = () => {
     return 'qwertyuiopasdfghjklzxcvbnm0987654321 ';
 }
 
-export { Algorithm, decryptionAlgorithm }
+export { encryptionAlgorithm, decryptionAlgorithm }

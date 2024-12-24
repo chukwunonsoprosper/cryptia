@@ -1,6 +1,6 @@
-import { Algorithm, decryptionAlgorithm } from './core/engine.js'
+import { encryptionAlgorithm, decryptionAlgorithm } from './core/engine.js'
 export const cryptia = () => {
-  const t = Algorithm(),
+  const t = encryptionAlgorithm(),
     r = decryptionAlgorithm()
   return {
     encrypt: function (e) {
