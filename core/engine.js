@@ -1,9 +1,9 @@
-const Algo = () => {
+const Algorithm = () => {
     return 'abcdefghijklmnopqrstuvwxyz1234567890 '
 };
 
-const shuffledAlgo = () => {
+const decryptionAlgorithm = () => {
     return 'qwertyuiopasdfghjklzxcvbnm0987654321 ';
 }
 
-export { Algo, shuffledAlgo }
+export { Algorithm, decryptionAlgorithm }

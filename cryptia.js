@@ -1,21 +1,21 @@
-import { Algo, shuffledAlgo } from './core/engine.js'
+import { Algorithm, decryptionAlgorithm } from './core/engine.js'
 export const cryptia = () => {
-  const t = Algo(),
-    e = shuffledAlgo()
+  const t = Algorithm(),
+    r = decryptionAlgorithm()
   return {
-    encrypt: function (r) {
+    encrypt: function (e) {
       let n = ''
-      for (let c = 0; c < r.length; c++) {
-        let l = t.indexOf(r.charAt(c))
-        n += -1 !== l ? e.charAt(l) : r.charAt(c)
+      for (let c = 0; c < e.length; c++) {
+        let o = t.indexOf(e.charAt(c))
+        n += -1 !== o ? r.charAt(o) : e.charAt(c)
       }
       return n
     },
-    decrypt: function (r) {
+    decrypt: function (e) {
       let n = ''
-      for (let c = 0; c < r.length; c++) {
-        let l = e.indexOf(r.charAt(c))
-        n += -1 !== l ? t.charAt(l) : t.charAt(c)
+      for (let c = 0; c < e.length; c++) {
+        let o = r.indexOf(e.charAt(c))
+        n += -1 !== o ? t.charAt(o) : t.charAt(c)
       }
       return n
     }

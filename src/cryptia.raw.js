@@ -1,7 +1,7 @@
-import { Algo, shuffledAlgo } from "./core/engine.js";
+import { Algorithm, decryptionAlgorithm } from "./core/engine.js";
 export const cryptia = () => {
-    const algorithm = Algo();
-    const shuffledAlgorithm = shuffledAlgo();
+    const algorithm = Algorithm();
+    const shuffledAlgorithm = decryptionAlgorithm();
     return {
         encrypt: function (text) {
             let encrypted = '';
