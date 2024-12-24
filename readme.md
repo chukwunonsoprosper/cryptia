@@ -15,7 +15,7 @@
 To install Cryptia, clone the repository and navigate to the project directory:
 
 ```bash
-git clone https://github.com/yourusername/cryptia.git
+git clone https://github.com/chukwunonsoprosper/cryptia
 cd cryptia
 ```
 ## Usage:
