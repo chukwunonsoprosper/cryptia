@@ -23,19 +23,21 @@ cd cryptia
 To use Cryptia, include the cryptia.js file in your project and create an instance of the cryptia object. You can then use the encrypt and decrypt methods to encrypt and decrypt text.
 
 ```javascript
-// Include the cryptia.js file in your project
-import { cryptia } from './cryptia.js';
+/* 
+import the module from cryptia.js
+*/
+import { cryptia } from "../cryptia.js";
 
-// Create an instance of cryptia
+/*
+create an instance of cryptia
+*/
+
 const crypt = cryptia();
 
-// Encrypt a text
-const encryptedText = crypt.encrypt("yourtext");
-console.log(encryptedText);
+const encrypted = crypt.encrypt("welcome to cryptia");
 
-// Decrypt the text
-const decryptedText = crypt.decrypt(encryptedText);
-console.log(decryptedText);
+console.log('[encrypted text]:', encrypted);
+console.log('[decryped text]:', crypt.decrypt(encrypted))
 ```
 
 
