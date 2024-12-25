@@ -47,9 +47,8 @@ console.log('[decryped text]:', crypt.decrypt(encrypted))
 
 - **cryptia.js:** Minified version of the library.
 
-- **use.js:** Example usage of the library.
+- **test.js:** Example usage of the library.
 
 - **cryptia.raw.js:** Source code of the library.
 
 - **package.json:** Project metadata
-
