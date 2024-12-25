@@ -53,3 +53,9 @@ console.log('[decryped text]:', crypt.decrypt(encrypted))
 
 - **package.json:** Project metadata
 
+## Running a test
+
+```javascript
+npm run test
+
+```
