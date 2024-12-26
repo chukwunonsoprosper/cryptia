@@ -14,6 +14,14 @@
     "type": "git",
     "url": "git+https://github.com/chukwunonsoprosper/cryptia.git"
   },
+  "files": [
+    "core/",
+    "lib/",
+    "src/",
+    "cryptia.js",
+    "cryptia.raw.js",
+    "readme.md"
+  ],
   "keywords": [
     "cryptia",
     "encryption",
