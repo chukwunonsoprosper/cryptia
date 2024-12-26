@@ -33,7 +33,7 @@ To use Cryptia, include the cryptia.js file in your project and create an instan
 /* 
 import the module from cryptia.js
 */
-import { cryptia } from "../cryptia.js";
+import cryptia from "../cryptia.js";
 
 /*
 create an instance of cryptia
