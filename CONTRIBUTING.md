@@ -12,7 +12,7 @@
 - Clone the forked repo to your local machine:
 
   ```bash
-  git clone https://github.com/your-username/cryptia.git
+  git clone https://github.com/chukwunonsoprosper/cryptia.git
   ```
 
 ## 3. Create a New Branch
