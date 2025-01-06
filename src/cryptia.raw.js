@@ -22,11 +22,15 @@ const cryptia = () => {
       let decrypted = "";
       const len = text.length;
       for (let i = 0; i < len; i++) {
-        const index = shuffledAlgorithm.indexOf(text[i]);
-        if (index !== -1) {
-          decrypted += algorithm[index];
-        } else {
-          decrypted += algorithm[i];
+        if(typeof text === "undefined"){
+            return "There might be an issue with the encrypted string. Please check your plaintext"
+        }else{
+          const index = shuffledAlgorithm.indexOf(text[i]);
+          if (index !== -1) {
+            decrypted += algorithm[index];
+          } else {
+            decrypted += algorithm[i];
+          }
         }
       }
       return decrypted;

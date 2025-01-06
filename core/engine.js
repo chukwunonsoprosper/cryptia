@@ -1,12 +1,9 @@
-
-
 const encryptionAlgorithm = () => {
-    return 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 `~!@#$%^&*()-_=+[{]}|;:,<.>/?\'"\\©•▪∘–°—⋅∙·․€£¥←→é²§−℃×÷℉®¦=№™℗<>⁅⁆‹›⌈⌉«»⌊⌋⟨⟩⟦⟧`´⟪⟫⟬⟭‸¸⟮⟯‖‗¨¯′‵‘’‚‛″‶“”„‟‴‷⁗*†‡%¶⁋⁎⁕‰‣⁌⁍⁑⁜‱♪⁽⁾⁂※⁞⁛¬⁏‥⁚⁖⁙✓:…⁝⁘_✕!¡‼⁔?¿⁈ª‿⁐&‽⁇º⁁⁄⏑±µ⁓⌀⏓⏒‾^⌁⏖⏔⏕⁊⁒⌂'
+    return 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 `~!@#$%^&*()-_=+[{]}|;:,<.>/?"©•▪∘–°—⋅∙·․€£¥←→é²§−℃×÷℉®¦№™℗⁅⁆‹›⌈⌉«»⌊⌋⟨⟩⟦⟧´⟪⟫⟬⟭‸¸⟮⟯‖‗¨¯′‵‘’‚‛″‶“”„‟‴‷⁗†‡¶⁋⁎⁕‰‣⁌⁍⁑⁜‱♪⁽⁾⁂※⁞⁛¬⁏‥⁚⁖⁙✓…⁝⁘✕¡‼⁔¿⁈ª‿⁐‽⁇º⁁⁄⏑±µ⌀⏓⏒‾⌁⏖⏔⏕⁊⁒⌂';
 };
 
 const decryptionAlgorithm = () => {
-    return 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0987654321 ⌂⁒⁊⏕⏔⏖⌁~^‾⏒⏓⌀µ±⏑–⁄⁁º⁇‽&⁐‿ª⁈¿?⁀°⁔‼¡!✕_⁘⁝…:✓⁙⁖⁚‥⁏¬⁛⁞·;※⁂⁾⁽♪‱⁜⁑⁍⁌‣‰⁕⁎⁋¶•%‡†*⁗‷‴‟„”‶″‛‚’‘‵′¯¨‗‖⟯⟮¸‸⟭⟬⟫⟪´`⟧⟦⟨⟩⌋⌊»«{}⌉⌈›‹[⁆⁅><)(℗™№=—¦®℉÷×|©℃−+-§²é←→¥£€․·∙⋅∘▪\\\'"/?,:;][=_)(*&^%$#@!~';
-}
+    return 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0987654321ا⌂⁒⁊⏕⏔⏖⌁~^‾⏒⏓⌀µ±⏑–⁄⁁º⁇‽&⁐‿ª⁈¿?⁀°⁔‼¡!✕_⁘⁝…:✓⁙⁖⁚‥⁏¬⁛⁞·;※⁂⁾⁽♪‱⁜⁑⁍⁌‣‰⁕⁎⁋¶•%‡†*⁗‷‴‟„”‶″‛‚’‘‵′¯¨‗‖⟯⟮¸‸⟭⟬⟫⟪´`⟧⟦⟨⟩⌋⌊»«{}⌉⌈›‹[⁆⁅><)(℗™№=—¦®℉÷×|©℃−+-§²é←→¥£€․∙⋅∘▪\'"/,]$#@';
+};
 
-
-export { encryptionAlgorithm, decryptionAlgorithm }
+export { encryptionAlgorithm, decryptionAlgorithm };
