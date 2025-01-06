@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "node lib/rltest.js",
+    "test": "node lib/test.js",
     "start": "node lib/test.js"
   },
   "repository": {

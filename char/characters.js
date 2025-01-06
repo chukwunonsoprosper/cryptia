@@ -39,12 +39,12 @@ const characterMap = new Map();
 for (let i = 0; i < allCharacters.length; i++) {
 	const char = allCharacters[i];
 	if (characterMap.has(char)) {
-		console.error(`Duplicate character '${char}' found at index ${i} (first occurrence at index ${characterMap.get(char)})`);
+		//console.error(`Duplicate character '${char}' found at index ${i} (first occurrence at index ${characterMap.get(char)})`);
 	} else {
 		characterMap.set(char, i);
 	}
 }
 
 if (characterMap.size === allCharacters.length) {
-	console.log("No duplicate characters found.");
+	//console.log("No duplicate characters found.");
 }
