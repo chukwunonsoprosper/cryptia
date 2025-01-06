@@ -1,9 +1,7 @@
-const encryptionAlgorithm = () => {
-    return 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 `~!@#$%^&*()-_=+[{]}|;:,<.>/?"©•▪∘–°—⋅∙·․€£¥←→é²§−℃×÷℉®¦№™℗⁅⁆‹›⌈⌉«»⌊⌋⟨⟩⟦⟧´⟪⟫⟬⟭‸¸⟮⟯‖‗¨¯′‵‘’‚‛″‶“”„‟‴‷⁗†‡¶⁋⁎⁕‰‣⁌⁍⁑⁜‱♪⁽⁾⁂※⁞⁛¬⁏‥⁚⁖⁙✓…⁝⁘✕¡‼⁔¿⁈ª‿⁐‽⁇º⁁⁄⏑±µ⌀⏓⏒‾⌁⏖⏔⏕⁊⁒⌂';
-};
+import { $primarySymbols, $revPrimarySymbols, $generalPunctuation, $revGeneralPunctuation, $currencySymbols, $revCurrencySymbols, $latinSymbols, $revLatinSymbols } from "../characters.js";
 
-const decryptionAlgorithm = () => {
-    return 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0987654321ا⌂⁒⁊⏕⏔⏖⌁~^‾⏒⏓⌀µ±⏑–⁄⁁º⁇‽&⁐‿ª⁈¿?⁀°⁔‼¡!✕_⁘⁝…:✓⁙⁖⁚‥⁏¬⁛⁞·;※⁂⁾⁽♪‱⁜⁑⁍⁌‣‰⁕⁎⁋¶•%‡†*⁗‷‴‟„”‶″‛‚’‘‵′¯¨‗‖⟯⟮¸‸⟭⟬⟫⟪´`⟧⟦⟨⟩⌋⌊»«{}⌉⌈›‹[⁆⁅><)(℗™№=—¦®℉÷×|©℃−+-§²é←→¥£€․∙⋅∘▪\'"/,]$#@';
-};
+const encryptionAlgorithm = () => `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 ${$primarySymbols}${$generalPunctuation}${$currencySymbols}${$latinSymbols}`;
+const decryptionAlgorithm = () => `qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0987654321 ${$revLatinSymbols}${$revCurrencySymbols}${$revGeneralPunctuation}${$revPrimarySymbols}`;
 
 export { encryptionAlgorithm, decryptionAlgorithm };
+
