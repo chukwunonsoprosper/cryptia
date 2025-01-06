@@ -7,6 +7,7 @@ import {
   $revCurrencySymbols,
   $latinSymbols,
   $revLatinSymbols,
+
 } from "../cipher/characters.js";
 
 function generateKey(key, obfuscationLevel) {
