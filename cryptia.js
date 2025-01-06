@@ -19,7 +19,7 @@ const cryptia = () => {
       let n = ''
       const len = e.length
       for (let c = 0; c < len; c++) {
-        if(typeof text === "undefined"){
+        if(typeof e === "undefined"){
           return "There might be an issue with the encrypted string. Please check your plaintext"
         }else{
           const o = r.indexOf(e[c])
