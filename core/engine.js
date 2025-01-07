@@ -6,58 +6,57 @@ import {
   $currencySymbols,
   $revCurrencySymbols,
   $latinSymbols,
-  $revLatinSymbols,
+  $revLatinSymbols
+} from '../cipher/characters.js'
 
-} from "../cipher/characters.js";
+function generateKey (key, obfuscationLevel) {
+  const baseKey = `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 ${$primarySymbols}${$generalPunctuation}${$currencySymbols}${$latinSymbols}`
 
-function generateKey(key, obfuscationLevel) {
-  const baseKey = `abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 ${$primarySymbols}${$generalPunctuation}${$currencySymbols}${$latinSymbols}`;
+  const baseKeyWithSpace = baseKey
+  const keySum = [...key].reduce((sum, char) => sum + char.charCodeAt(0), 0)
 
-  const baseKeyWithSpace = baseKey;
-  const keySum = [...key].reduce((sum, char) => sum + char.charCodeAt(0), 0);
-
-  const obfuscate = (chars) =>
+  const obfuscate = chars =>
     chars
-      .split("")
+      .split('')
       .sort(
         (a, b) =>
           (((a.charCodeAt(0) + keySum) * obfuscationLevel) % chars.length) -
           (((b.charCodeAt(0) + keySum) * obfuscationLevel) % chars.length)
       )
-      .join("");
+      .join('')
 
-  const shuffled = obfuscate(baseKeyWithSpace);
+  const shuffled = obfuscate(baseKeyWithSpace)
 
-  return { encryptionKey: baseKey, decryptionKey: shuffled };
+  return { encryptionKey: baseKey, decryptionKey: shuffled }
 }
-export function encryptionAlgorithm(
+export function encryptionAlgorithm (
   text,
   key,
   obfuscationLevel,
   preserveWhitespace
 ) {
-  const { encryptionKey, decryptionKey } = generateKey(key, obfuscationLevel);
-  let encryptedText = "";
+  const { encryptionKey, decryptionKey } = generateKey(key, obfuscationLevel)
+  let encryptedText = ''
 
   for (const char of text) {
-    const index = encryptionKey.indexOf(char);
+    const index = encryptionKey.indexOf(char)
     if (index === -1) {
-      encryptedText += char;
+      encryptedText += char
     } else {
-      encryptedText += decryptionKey[index];
+      encryptedText += decryptionKey[index]
     }
   }
 
   if (preserveWhitespace) {
     encryptedText = encryptedText
-      .replace(/ /g, "_SPACE_")
-      .replace(/\n/g, "_NEWLINE_");
+      .replace(/ /g, '_SPACE_')
+      .replace(/\n/g, '_NEWLINE_')
   }
 
-  return encryptedText;
+  return encryptedText
 }
 
-export function decryptionAlgorithm(
+export function decryptionAlgorithm (
   encryptedText,
   key,
   obfuscationLevel,
@@ -65,22 +64,22 @@ export function decryptionAlgorithm(
 ) {
   if (preserveWhitespace) {
     encryptedText = encryptedText
-      .replace(/_SPACE_/g, " ")
-      .replace(/_NEWLINE_/g, "\n");
+      .replace(/_SPACE_/g, ' ')
+      .replace(/_NEWLINE_/g, '\n')
   }
 
-  const { encryptionKey, decryptionKey } = generateKey(key, obfuscationLevel);
+  const { encryptionKey, decryptionKey } = generateKey(key, obfuscationLevel)
 
-  let decryptedText = "";
+  let decryptedText = ''
 
   for (const char of encryptedText) {
-    const index = decryptionKey.indexOf(char);
+    const index = decryptionKey.indexOf(char)
     if (index === -1) {
-      decryptedText += char;
+      decryptedText += char
     } else {
-      decryptedText += encryptionKey[index];
+      decryptedText += encryptionKey[index]
     }
   }
 
-  return decryptedText;
+  return decryptedText
 }
