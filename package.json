@@ -1,6 +1,6 @@
 {
   "name": "cryptia",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "cryptia is a simple JavaScript library for encrypting and decrypting text using a basic substitution cipher. It provides an easy-to-use interface for securing text data in client-side applications..",
   "main": "cryptia.js",
   "directories": {
