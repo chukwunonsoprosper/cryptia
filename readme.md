@@ -41,13 +41,12 @@ You can also link `workspace.js` to your project directory to integrate CryptiaJ
 /**
  * Import Cryptia and required dependencies.
  */
-import Cryptia from 'cryptia';
-import fs from 'fs';
+import Cryptia from '../cryptia.js'
 
 // Initialize Cryptia with custom settings.
 const cryptia = Cryptia({
     obfuscationLevel: 10,
-    logging: true,
+    logging: false,
     preserveWhitespace: true
 });
 
@@ -55,27 +54,14 @@ const cryptia = Cryptia({
  * Encrypt and decrypt text with a secure key.
  */
 const plainText = 'This is a secret message.🤣😂';
-const encryptionKey = 'MySecureKey123';
+const encryptionKey = 'MySecureKey1';
 
-const encryptedResult = cryptia.encrypt(plainText, encryptionKey, result => {
-    console.log('Encryption callback:', result);
-});
+const encryptedResult = cryptia.encrypt(plainText, encryptionKey)
 console.log('Encrypted Text:', encryptedResult.data);
 
-const decryptedResult = cryptia.decrypt(
-    encryptedResult.data,
-    encryptionKey,
-    result => {
-        console.log('Decryption callback:', result);
-    }
-);
+const decryptedResult = cryptia.decrypt(encryptedResult, encryptionKey)
 console.log('Decrypted Text:', decryptedResult.data);
 
-if (plainText === decryptedResult.data) {
-    console.log('Decryption successful!');
-} else {
-    console.log('Decryption failed!');
-}
 ```
 
 ## 🔥 What’s New in v1.0.6?
@@ -91,7 +77,7 @@ This project is licensed under the MIT License.
 
 ## 👨‍💻 Contributors
 
-Builder: Chukwunonso Prosper & contributors.
+Builder: Chukwunonso Prosper & other contributors.
 
 ## 🌟 Get Involved!
 
@@ -101,5 +87,5 @@ Builder: Chukwunonso Prosper & contributors.
 📖 Read the full guide: [npmjs.com/package/cryptia](https://www.npmjs.com/package/cryptia)
 
 📢 Follow for updates & discussions:
-- 🐦 Twitter: [@prospercode](https://twitter.com/prospercode)
+- 🐦 Twitter: [@prospercode](https://x.com/prospercode)
 
