@@ -1,23 +1,25 @@
-# CryptiaJS
+# CryptiaJS 🔐
 
-cryptia is a simple JavaScript library for encrypting and decrypting text using a basic substitution cipher. It provides an easy-to-use interface for securing text data in client-side applications..
+CryptiaJS is a lightweight and secure JavaScript library for encrypting and decrypting text using a substitution cipher. Whether you're safeguarding sensitive data in web applications or adding encryption to your server-side projects, CryptiaJS is designed to be fast, reliable, and easy to use. ⚡
 
-## Installation
+Your data stays protected—as long as you keep your encryption key private.
 
-You can install CryptiaJS by cloning the GitHub repository:
+## 🚀 Installation
+
+Install CryptiaJS via npm:
+
+```bash
+npm i cryptia
+```
+
+Or clone the GitHub repository:
 
 ```bash
 git clone https://github.com/chukwunonsoprosper/cryptia
 cd cryptia
 ```
 
-Or install via npm:
-
-```bash
-npm i cryptia
-```
-
-## Usage
+## 🛠 Usage
 
 To test the library, run:
 
@@ -31,16 +33,73 @@ To spin up a customizable workspace, run:
 npm run dev
 ```
 
-You can link `workspace.js` to your working directory to make use of the library.
+You can also link `workspace.js` to your project directory to integrate CryptiaJS easily.
 
-## License
+### Example
+
+```javascript
+/**
+ * Import Cryptia and required dependencies.
+ */
+import Cryptia from 'cryptia';
+import fs from 'fs';
+
+// Initialize Cryptia with custom settings.
+const cryptia = Cryptia({
+    obfuscationLevel: 10,
+    logging: true,
+    preserveWhitespace: true
+});
+
+/**
+ * Encrypt and decrypt text with a secure key.
+ */
+const plainText = 'This is a secret message.🤣😂';
+const encryptionKey = 'MySecureKey123';
+
+const encryptedResult = cryptia.encrypt(plainText, encryptionKey, result => {
+    console.log('Encryption callback:', result);
+});
+console.log('Encrypted Text:', encryptedResult.data);
+
+const decryptedResult = cryptia.decrypt(
+    encryptedResult.data,
+    encryptionKey,
+    result => {
+        console.log('Decryption callback:', result);
+    }
+);
+console.log('Decrypted Text:', decryptedResult.data);
+
+if (plainText === decryptedResult.data) {
+    console.log('Decryption successful!');
+} else {
+    console.log('Decryption failed!');
+}
+```
+
+## 🔥 What’s New in v1.0.6?
+
+- ✅ Stronger security – Your encrypted data stays safe as long as your encryption key remains private.
+- ✅ Better performance – Optimized for speed and efficiency.
+- ✅ Cleaner code – More maintainable and readable.
+- ✅ Improved documentation – Making integration smoother than ever.
+
+## 📜 License
 
 This project is licensed under the MIT License.
 
-## About
+## 👨‍💻 Contributors
 
-CryptiaJS is a simple JavaScript library for encrypting and decrypting text using a basic substitution cipher. It provides an easy-to-use interface for securing text data in client-side applications.
+Builder: Chukwunonso Prosper & contributors.
 
-## Contributors
+## 🌟 Get Involved!
 
-- **Builder**: Chukwunonso Prosper and other
+💙 Don't forget to star the project on GitHub!
+🔗 [GitHub Repository](https://github.com/chukwunonsoprosper/cryptia)
+
+📖 Read the full guide: [npmjs.com/package/cryptia](https://www.npmjs.com/package/cryptia)
+
+📢 Follow for updates & discussions:
+- 🐦 Twitter: [@prospercode](https://twitter.com/prospercode)
+
